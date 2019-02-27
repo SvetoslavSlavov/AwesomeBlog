@@ -21,7 +21,6 @@ class HomeContainer extends Component {
     render() {
         const { data } = this.props;
         const sorted = _.sortBy(data, e => !e.isFavorite)
-        console.log(sorted)
         const postListFavorites = sorted.length ? (
             sorted.map((post, index) => {
                 return (
