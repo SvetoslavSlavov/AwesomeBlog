@@ -31,7 +31,7 @@ class AddBlogContainer extends Component {
     changeDate = (evt) => {
         this.setState({ date: evt.target.value });
     }
-    pressCreate = async () => {
+    pressCreate = () => {
         const { title, description, author, date, isFavorites } = this.state;
         const { data } = this.props;
         if (title !== '' && description !== '' && author !== '') {
