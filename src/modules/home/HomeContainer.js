@@ -44,7 +44,7 @@ class HomeContainer extends Component {
         );
       })
     ) : (
-      <div className="center">No posts post yet.</div>
+      <div>No posts post yet.</div>
     );
     return <React.Fragment>{postListFavorites}</React.Fragment>;
   }
