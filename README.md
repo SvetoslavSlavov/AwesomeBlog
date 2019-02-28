@@ -18,6 +18,17 @@ If you are getting ESLint preflight check error. Ignore the check (just as it sa
 
 to a file called `env` in the project root.
 
+To still see warning and versions check
+
+```
+if (process.env.SKIP_PREFLIGHT_CHECK === 'true') {
+  console.log('Warning: ${chalk.bold('SKIP_PREFLIGHT_CHECK')} is set to true');
+  console.log('Having wrong version of following packages may break your setup: ${depsToCheck.join(', ')}.\n')
+  return
+}
+```
+
+
 ## Available Scripts
 
 In the project directory, you can run:
