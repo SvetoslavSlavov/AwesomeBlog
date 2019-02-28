@@ -1,9 +1,14 @@
 import React from "react";
+import styled from 'styled-components';
+
+const WrongFiledP = styled.p`
+    color: red;
+`
 
 const WrongFieldsText = ({ text }) => (
-    <p className="wrong-fields-add-blog-form">
+    <WrongFiledP>
         {text}
-     </p>
+     </WrongFiledP>
 )
 
 export default WrongFieldsText;

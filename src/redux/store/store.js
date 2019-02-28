@@ -2,7 +2,7 @@ import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import logger from 'redux-logger'
 import { loadState, saveState } from '../../helpers/persistState/localStorage';
-import rootReducers from "./../reducers/rootReducer";
+import rootReducers from "../reducers/rootReducer";
 
 
 const persistState = loadState();

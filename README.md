@@ -10,6 +10,14 @@ Create awesome blog page with React and styled-components
 
 Everything will be stored on local storage file, there will be no API requests.
 
+## Possible issues
+
+If you are getting ESLint preflight check error. Ignore the check (just as it says) by putting
+
+```SKIP_PREFLIGHT_CHECK=true```
+
+to a file called `env` in the project root.
+
 ## Available Scripts
 
 In the project directory, you can run:
