@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { loadData } from '../../redux/actions/loadData/aLoadData';
 import { addToFavorites } from '../../redux/actions/favorites/aFavorites';
 import { deletePost } from '../../redux/actions/deletePost/aDeletePost';
-import HomeCard from './components/HomeCard';
+import HomeCards from './components/HomeCards';
 
 class HomeContainer extends Component {
   componentDidMount() {
@@ -26,23 +26,14 @@ class HomeContainer extends Component {
     const { data } = this.props;
     const sorted = _.sortBy(data, e => !e.isFavorite);
     const postListFavorites = sorted.length ? (
-      sorted.map((post, index) => {
-        return (
-          <HomeCard
-            key={post.id}
-            title={post.title}
-            created={post.created}
-            author={post.author}
-            text={post.text}
-            pressFavorites={() =>
-              this.pressFavorites(data, post.isFavorite, index)
-            }
-            textFavorites={post.isFavorite}
-            textDelete="Delete"
-            pressDelete={() => this.pressDelete(data, index)}
-          />
-        );
-      })
+      <HomeCards
+        posts={sorted}
+        pressFavorites={(isFavorite, index) =>
+          this.pressFavorites(data, isFavorite, index)
+        }
+        pressDelete={(index) => this.pressDelete(data, index)}
+        textDelete='Delete'
+      />
     ) : (
       <div>No posts post yet.</div>
     );
