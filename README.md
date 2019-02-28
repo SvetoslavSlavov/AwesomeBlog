@@ -12,7 +12,7 @@ Everything will be stored on local storage file, there will be no API requests.
 
 ## Possible issues
 
-If you are getting ESLint preflight check error. Ignore the check (just as it says) by putting
+If you are getting ESLint preflight check error. Ignore the check (just as it says) by putting in <a href="https://github.com/facebook/create-react-app/blob/v2.1.5/packages/react-scripts/scripts/utils/verifyPackageTree.js">verifyPackageTree.js<a/>
 
 ```SKIP_PREFLIGHT_CHECK=true```
 
