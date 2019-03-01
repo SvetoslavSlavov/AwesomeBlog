@@ -16,7 +16,7 @@ const INITIAL_STATE = {
 const updateFavorites = (state, data, id, favorites) => {
   const newData = [...data];
   const sorted = _.sortBy(newData, e => !e.isFavorite);
-  if (favorites === true) {
+  if (favorites) {
     sorted[id].isFavorite = false;
   } else {
     sorted[id].isFavorite = true;

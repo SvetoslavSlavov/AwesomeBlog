@@ -9,7 +9,7 @@ import HomeCards from './components/HomeCards';
 class HomeContainer extends Component {
   componentDidMount() {
     const { data } = this.props;
-    if (_.isEmpty(data) === true) {
+    if (_.isEmpty(data)) {
       this.props.loadData();
     }
   }

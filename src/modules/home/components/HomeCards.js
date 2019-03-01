@@ -38,7 +38,7 @@ const HomeCards = ({ posts, pressFavorites, pressDelete, textDelete }) => (
           <CardP>{text}</CardP>
           <CardP>{author}</CardP>
           <MainButton primary onClick={() => pressFavorites(isFavorite, index)}>
-            {isFavorite === true ? 'Remove from favorites' : 'Add to favorites'}
+            {isFavorite ? 'Remove from favorites' : 'Add to favorites'}
           </MainButton>
           <MainButton onClick={() => pressDelete(index)}>
             {textDelete}
